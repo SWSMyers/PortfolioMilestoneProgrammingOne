@@ -1,6 +1,8 @@
 import java.util.Scanner;
 
 public class Main {
+
+    //declare Months as String[]
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String[] months = {"January", "February", "March", "April", "May", "June", "July",
@@ -20,8 +22,10 @@ public class Main {
         System.out.print("Enter a month to view or 'year' for the yearly summary: ");
         String input = scanner.next();
 
+        // Create loop to handle case for yearly summary, else average temp for entered month.
+
         if (input.equalsIgnoreCase("year")) {
-            System.out.println("Yearly Temperature Summary:");
+            System.out.println("Summary of Yearly Temperatures:");
             for (int i = 0; i < months.length; i++) {
                 System.out.printf("%s: %.2f°F\n", months[i], temperatures[i]);
             }
