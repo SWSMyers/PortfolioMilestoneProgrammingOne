@@ -54,4 +54,22 @@ public class HondaPilot2014 {
         String engineStatus = engineOn ? "On" : "Off";
         System.out.println("Color: " + color + " Mileage: " + mileage + " Engine: " + engineStatus);
     }
+    //Include methods to add/remove/update
+
+    //Method to update the color of the Honda Pilot
+    public void updateColor(string newColor) {
+        this.color = newColor;
+    }
+
+    //Method to reset the mileage for testing purposes or engine replacement
+    public void resetMileage()  {
+        this.mileage = 0;
+    }
+
+    //Method to update mileage manually with a check to ensure behavioral integrity
+    public void updateMileage(double newMileage)  {
+        if (newMileage >=0) {
+            this.mileage = newMileage;
+        }
+    }
 }
