@@ -1,3 +1,5 @@
+import java.lang.String;
+
 public class HondaPilot2014 {
     private String color;
     private double mileage;
