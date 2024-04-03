@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 // Create a tax withholding calculator for weekly income.
-// The program should prompt the user for weekly income and then calculate the tzx withholding.
+// The program should prompt the user for weekly income and then calculate the tax withholding.
 
 public class taxWithholding {
     public static void main(String[] args) {
