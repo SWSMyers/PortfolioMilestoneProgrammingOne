@@ -22,6 +22,7 @@ public class Main {
                 System.out.println(inventory.addNewVehicle(auto2));
                 System.out.println(inventory.addNewVehicle(auto3));
                 System.out.println(inventory.addNewVehicle(auto4));
+                System.out.println();
 
                 // List all vehicles
                 inventory.listAllVehicles();
@@ -33,6 +34,7 @@ public class Main {
                 inventory.listAllVehicles();
 
                 // Ask user if they want to print the information to a file
+                System.out.println();
                 System.out.println("Do you want to print the information to a file (Y or N)?");
                 // Read the user response
                 String response = scanner.nextLine();

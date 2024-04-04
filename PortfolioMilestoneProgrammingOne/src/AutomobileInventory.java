@@ -20,7 +20,7 @@ public class AutomobileInventory {
     public String addNewVehicle(HondaAutomobiles vehicle) {
         try {
             inventory.add(vehicle);
-            return "Vehicle successfully added";
+            return "Vehicle successfully added \n";
         } catch (Exception e) {
             return "Failed to add vehicle: " + e.getMessage();
         }
@@ -41,7 +41,7 @@ public class AutomobileInventory {
     public String removeVehicle(HondaAutomobiles vehicle) {
         try {
             if (inventory.remove(vehicle)) {
-                return "Vehicle successfully removed";
+                return "Vehicle successfully removed \n";
             } else {
                 return "Vehicle not found in inventory";
             }
