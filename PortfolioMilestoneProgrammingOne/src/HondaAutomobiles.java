@@ -18,7 +18,6 @@ public class HondaAutomobiles {
     private String color;
     private int year;
     private int mileage;
-
     // Default constructor initializes the object with default values
     public HondaAutomobiles() {
         make    = "";
@@ -27,7 +26,6 @@ public class HondaAutomobiles {
         year    = 0;
         mileage = 0;
     }
-
     // Parameterized constructor to initialize the object with specific values
     public HondaAutomobiles(String make, String model, String color, int year, int mileage) {
         this.make    = make;
@@ -36,7 +34,6 @@ public class HondaAutomobiles {
         this.year    = year;
         this.mileage = mileage;
     }
-
     // Method to return the vehicle's details as a string
     public String getVehicleDetails() {
         return "Make: " + make + ", Model: " + model + ", Color: " + color + ", Year: " + year + ", Mileage: " + mileage;

@@ -1,7 +1,4 @@
 import java.util.LinkedList;
-import java.util.Scanner;
-import java.io.FileNotFoundException;
-import java.io.PrintWriter;
 import java.util.List;
 // Create and instance of AutomobileInventory, and
 // add HondaAutomobile objects to the inventory
