@@ -1,5 +1,4 @@
-import java.util.LinkedList;
-import java.util.List;
+
 import java.util.Scanner;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
@@ -10,49 +9,50 @@ public class Main {
         // Create an instance of AutomobileInventory
         AutomobileInventory inventory = new AutomobileInventory();
         // Introduce Scanner object to read the users input
-        Scanner scanner = new Scanner(System.in);
+        try (Scanner scanner = new Scanner(System.in)) {
 
-        try {
-            // Add vehicles to the inventory using the parameterized constructor
-            HondaAutomobiles auto1 = new HondaAutomobiles("Honda", "Civic", "Black", 2022, 16000);
-            HondaAutomobiles auto2 = new HondaAutomobiles("Honda", "Ridgeline", "Graphite", 2023, 9500);
-            HondaAutomobiles auto3 = new HondaAutomobiles("Honda", "Pilot", "Sky Blue", 2024, 127);
-            HondaAutomobiles auto4 = new HondaAutomobiles("Honda", "Accord", "Red", 2021, 26000);
-            //output the result of adding vehicles
-            System.out.println(inventory.addNewVehicle(auto1));
-            System.out.println(inventory.addNewVehicle(auto2));
-            System.out.println(inventory.addNewVehicle(auto3));
-            System.out.println(inventory.addNewVehicle(auto4));
+            try {
+                // Add vehicles to the inventory using the parameterized constructor
+                HondaAutomobiles auto1 = new HondaAutomobiles("Honda", "Civic", "Black", 2022, 16000);
+                HondaAutomobiles auto2 = new HondaAutomobiles("Honda", "Ridgeline", "Graphite", 2023, 9500);
+                HondaAutomobiles auto3 = new HondaAutomobiles("Honda", "Pilot", "Sky Blue", 2024, 127);
+                HondaAutomobiles auto4 = new HondaAutomobiles("Honda", "Accord", "Red", 2021, 26000);
+                //output the result of adding vehicles
+                System.out.println(inventory.addNewVehicle(auto1));
+                System.out.println(inventory.addNewVehicle(auto2));
+                System.out.println(inventory.addNewVehicle(auto3));
+                System.out.println(inventory.addNewVehicle(auto4));
 
-            // List all vehicles
-            inventory.listAllVehicles();
+                // List all vehicles
+                inventory.listAllVehicles();
 
-            // Remove a vehicle from the inventory and output the result
-            System.out.println(inventory.removeVehicle(auto1));
+                // Remove a vehicle from the inventory and output the result
+                System.out.println(inventory.removeVehicle(auto1));
 
-            // List all vehicles to confirm removal
-            inventory.listAllVehicles();
+                // List all vehicles to confirm removal
+                inventory.listAllVehicles();
 
-            // Ask user if they want to print the information to a file
-            System.out.println("Do you want to print the information to a file (Y or N)?");
-            // Read the user response
-            String response = scanner.nextLine();
-            // Check if the user wants to print the information to a file
-            if ("Y".equalsIgnoreCase(response)) {
-                // Call method to print information to a file
-                printToFile(inventory, "C:\\Temp\\Autos.txt");
-                // Inform the user that the information has been printed
-                System.out.println("Information printed to file.");
-            } else {
-                // Print any exceptions that occur
-                System.out.println("A file will not be printed.");
+                // Ask user if they want to print the information to a file
+                System.out.println("Do you want to print the information to a file (Y or N)?");
+                // Read the user response
+                String response = scanner.nextLine();
+                // Check if the user wants to print the information to a file
+                if ("Y".equalsIgnoreCase(response)) {
+                    // Call method to print information to a file
+                    printToFile(inventory, "C:\\Temp\\Autos.txt");
+                    // Inform the user that the information has been printed
+                    System.out.println("Information printed to file.");
+                } else {
+                    // Print any exceptions that occur
+                    System.out.println("A file will not be printed.");
+                }
+            } catch (Exception e) {
+                System.out.println("An error occurred: " + e.getMessage());
+                e.printStackTrace();
+            } finally {
+                // Close the scanner object
+                scanner.close();
             }
-        } catch (Exception e) {
-            System.out.println("An error occurred: " + e.getMessage());
-            e.printStackTrace();
-        } finally {
-            // Close the scanner object
-            scanner.close();
         }
     }
 
